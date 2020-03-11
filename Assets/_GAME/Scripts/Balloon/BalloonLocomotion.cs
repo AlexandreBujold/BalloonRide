@@ -66,6 +66,11 @@ namespace BalloonGame.Balloon.Locomotion
         {
             float acceleration = (maxVelocity / accelerationTime) * Time.deltaTime;
             float newVelocity = Mathf.Clamp(target + (acceleration * Mathf.Sign(input)), -maxVelocity, maxVelocity);
+            //Min Velocity
+            if (Mathf.Abs(newVelocity) < 0.25f)
+            {
+                newVelocity = 0.25f * Mathf.Sign(input);
+            }
             return newVelocity;
         }
 
