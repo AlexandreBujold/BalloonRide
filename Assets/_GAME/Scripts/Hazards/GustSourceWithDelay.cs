@@ -38,7 +38,6 @@ public class GustSourceWithDelay : GustSource
         {
             Debug.Log("Delay");
             yield return new WaitForSeconds(waitTime);
-            Debug.Log()
         }
     }
 }
