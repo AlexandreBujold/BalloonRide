@@ -2,42 +2,48 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GustSourceWithDelay : GustSource
+namespace BalloonGame.GustHazard
 {
-    [Header("Gust Coroutine")]
-    [SerializeField] private IEnumerator gustCoroutine;
-
-    [Space]
-    [Header("Gust Delay")]
-    [SerializeField] private float delay;
-
-    [Space]
-    [Header("Coroutine Bool")]
-    [SerializeField] private bool delayCoroutineStarted = false;
-
-    protected override void OnEnable()
+    public class GustSourceWithDelay : GustSource
     {
-        InitializeDirection(m_facing);
-        gustDelegate = GustDelayed;
-        gustCoroutine = Gust(delay);
-    }
+        [Header("Gust Coroutine")]
+        [SerializeField] private IEnumerator gustCoroutine;
 
-    private void GustDelayed()
-    {
-        if(!delayCoroutineStarted)
+        [Space]
+        [Header("Gust Delay")]
+        [SerializeField] private float delay;
+
+        [Space]
+        [Header("Coroutine Bool")]
+        [SerializeField] private bool delayCoroutineStarted = false;
+
+        protected override void OnEnable()
         {
-            Debug.Log("Started");
-            StartCoroutine(gustCoroutine);
-            delayCoroutineStarted = true;
+            InitializeDirection(m_facing);
+            gustDelegate = GustDelayed;
+            gustCoroutine = Gust(delay);
         }
-    }
 
-    private IEnumerator Gust(float waitTime)
-    {
-        while(true)
+        private void GustDelayed()
         {
-            Debug.Log("Delay");
-            yield return new WaitForSeconds(waitTime);
+            if (!delayCoroutineStarted)
+            {
+                Debug.Log("Started");
+                StartCoroutine(gustCoroutine);
+                delayCoroutineStarted = true;
+            }
+        }
+
+        private IEnumerator Gust(float waitTime)
+        {
+            while (true)
+            {
+                Debug.Log("Delay");
+                yield return new WaitForSeconds(waitTime);
+                Debug.Log("Enable");
+                yield return new WaitForSeconds(waitTime);
+                Debug.Log("Disable");
+            }
         }
     }
 }
