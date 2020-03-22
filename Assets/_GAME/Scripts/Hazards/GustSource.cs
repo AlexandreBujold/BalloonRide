@@ -35,7 +35,24 @@ namespace BalloonGame.GustHazard
 
         protected void GustConsistent()
         {
-
+            switch(m_facing)
+            {
+                case Direction.LEFT:
+                    Debug.DrawLine(transform.position, transform.position - new Vector3(3, 0, 0), Color.red);
+                    break;
+                case Direction.UP:
+                    Debug.DrawLine(transform.position, transform.position + new Vector3(0, 3, 0), Color.red);
+                    break;
+                case Direction.DOWN:
+                    Debug.DrawLine(transform.position, transform.position - new Vector3(0, 3, 0), Color.red);
+                    break;
+                case Direction.RIGHT:
+                    Debug.DrawLine(transform.position, transform.position + new Vector3(3, 0, 0), Color.red);
+                    break;
+                default:
+                    Debug.DrawLine(transform.position, transform.position + new Vector3(3, 0, 0), Color.red);
+                    break;
+            }
         }
 
         protected void InitializeDirection(Direction dir)
