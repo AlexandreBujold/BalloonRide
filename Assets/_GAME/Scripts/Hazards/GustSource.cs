@@ -40,6 +40,12 @@ namespace BalloonGame.GustHazard
             gustDelegate();
         }
 
+        /**<summary>
+         * GunConsistent is the functionality for the gust hazard. A very simple switch statement that changes the direction of a 
+         * capsule cast. The capsule cast only interacts with the balloon and pushes it based on the gust strength.
+         * GustSourceWithDelay.cs uses this function to do the same thing
+         * </summary>
+         */
         protected void GustConsistent()
         {
             switch(m_facing)
@@ -102,6 +108,7 @@ namespace BalloonGame.GustHazard
             }
         }
 
+        //Initialize a basic direction if no direction is assigned so as to prevent errors
         protected void InitializeDirection(Direction dir)
         {
             if (m_facing == Direction.NULL)
