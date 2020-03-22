@@ -36,12 +36,14 @@ namespace BalloonGame.GustHazard
 
         protected override void Update()
         {
+            //Does the same as the base class but only if enabled   
             if (gustEnabled)
             {
                 base.Update();
             }
         }
-
+        
+        //Used to activate the gust functionality on a timed delay. Delay can be changed variably
         private IEnumerator GustDelay(float waitTime)
         {
             while (true)
