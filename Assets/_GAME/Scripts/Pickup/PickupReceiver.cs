@@ -1,11 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PickupReceiver : MonoBehaviour
 {
     public Transform pickupTransform;
     public Pickup m_pickup;
+
+    public UnityEvent OnPickup;
+
+    private void Awake()
+    {
+        
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +52,7 @@ public class PickupReceiver : MonoBehaviour
 
         SetPickup(newPickup);
         SetPickupPosition(newPickup);
+        OnPickup.Invoke();
     }
 
     public void Drop()
