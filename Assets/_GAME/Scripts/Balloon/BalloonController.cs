@@ -5,6 +5,7 @@ using BalloonGame.Input;
 using BalloonGame.Balloon.Locomotion;
 using BalloonGame.Balloon.Physics;
 using BalloonGame.Balloon.Fuel;
+using BalloonGame.Balloon.Health;
 
 
 public class BalloonController : MonoBehaviour //Input, Art / Animation, Effects, UI, Resources Usage
@@ -14,6 +15,7 @@ public class BalloonController : MonoBehaviour //Input, Art / Animation, Effects
     public BalloonLocomotion m_balloonLocomotion;
     public BalloonPhysicsController m_balloonPhysicsController;
     public BalloonFuel m_balloonFuel;
+    public BalloonHealth m_balloonHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,7 @@ public class BalloonController : MonoBehaviour //Input, Art / Animation, Effects
         m_balloonLocomotion = m_balloonLocomotion == null ? GetComponentInChildren<BalloonLocomotion>() : m_balloonLocomotion;
         m_balloonPhysicsController = m_balloonPhysicsController == null ? GetComponentInChildren<BalloonPhysicsController>() : m_balloonPhysicsController;
         m_balloonFuel = m_balloonFuel == null ? GetComponentInChildren<BalloonFuel>() : m_balloonFuel;
+        m_balloonHealth = m_balloonHealth == null ? GetComponentInChildren<BalloonHealth>() : m_balloonHealth;
     }
 
     // Update is called once per frame

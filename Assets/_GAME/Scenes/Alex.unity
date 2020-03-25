@@ -1295,6 +1295,7 @@ MonoBehaviour:
   m_balloonLocomotion: {fileID: 2104305692}
   m_balloonPhysicsController: {fileID: 0}
   m_balloonFuel: {fileID: 0}
+  m_balloonHealth: {fileID: 0}
 --- !u!1 &2104305690
 GameObject:
   m_ObjectHideFlags: 0

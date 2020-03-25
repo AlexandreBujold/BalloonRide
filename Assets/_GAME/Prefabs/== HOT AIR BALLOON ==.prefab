@@ -10498,6 +10498,7 @@ Transform:
   - {fileID: 1177270152109892544}
   - {fileID: 827721565}
   - {fileID: 325194865}
+  - {fileID: 8264096528159200785}
   m_Father: {fileID: 1177270150965223994}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10633,6 +10634,7 @@ MonoBehaviour:
   m_balloonLocomotion: {fileID: 1177270152418366928}
   m_balloonPhysicsController: {fileID: 1177270152418366930}
   m_balloonFuel: {fileID: 827721566}
+  m_balloonHealth: {fileID: 1740000729250162850}
 --- !u!1 &1177270151245524949
 GameObject:
   m_ObjectHideFlags: 0
@@ -12041,6 +12043,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupTransform: {fileID: 379917633}
   m_pickup: {fileID: 0}
+  OnPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1177270152501518654
 GameObject:
   m_ObjectHideFlags: 0
@@ -12375,3 +12382,59 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 1.9
     m_UpperAngle: -35.87
+--- !u!1 &6238066910997879031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8264096528159200785}
+  - component: {fileID: 1740000729250162850}
+  m_Layer: 10
+  m_Name: Health
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8264096528159200785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6238066910997879031}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1177270151193168053}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1740000729250162850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6238066910997879031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47649c8b118587841852584b8a5eb0a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_balloonController: {fileID: 1177270151193168050}
+  health: 3
+  maxHealth: 3
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnKill:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
