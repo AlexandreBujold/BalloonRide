@@ -16,6 +16,8 @@ public class TabGroup : MonoBehaviour
     public TabButton selectedTab;
     public List<GameObject> objectsToSwap;
 
+    public PanelGroup panelGroup;
+
     public void Subscribe(TabButton button)
     {
         if (tabButtons == null)
@@ -56,10 +58,14 @@ public class TabGroup : MonoBehaviour
         button.background.color = changeColors == true ? tabColors.tabActive : button.background.color;
 
         int index = button.transform.GetSiblingIndex();
-        for(int i = 0; i < objectsToSwap.Count; i++)
+        //for(int i = 0; i < objectsToSwap.Count; i++)
+        //{
+        //    objectsToSwap[i].SetActive(index == i ? true : false);
+        //}
+
+        if (null != panelGroup)
         {
-            bool active = index == i ? true : false;
-            objectsToSwap[i].SetActive(active);
+            panelGroup.SetPageIndex(index);
         }
     }
 
