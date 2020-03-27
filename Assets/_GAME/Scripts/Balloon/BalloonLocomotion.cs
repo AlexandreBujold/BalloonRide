@@ -51,6 +51,16 @@ namespace BalloonGame.Balloon.Locomotion
             return velocity;
         }
 
+        public void ApplyBalloonImpulse(Vector2 direction, float strength)
+        {
+            Vector2 impulse = direction * strength;
+
+            if (m_rigidbody2D != null)
+            {
+                m_rigidbody2D.AddForce(impulse, ForceMode2D.Impulse);
+            }
+        }
+
         [System.Serializable]
         public struct MovementAxisConfiguration
         {

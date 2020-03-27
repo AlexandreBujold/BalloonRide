@@ -39,6 +39,7 @@ namespace BalloonGame.Balloon.Health
                 if (OnKill != null)
                 {
                     OnKill.Invoke();
+                    Destroy(this.transform.parent.gameObject);
                 }
             }
         }
