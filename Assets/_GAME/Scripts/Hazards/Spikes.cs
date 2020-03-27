@@ -4,24 +4,11 @@ using UnityEngine;
 using BalloonGame.Balloon.Locomotion;
 using BalloonGame.Balloon.Health;
 
-public class RockObject : MonoBehaviour
+public class Spikes : MonoBehaviour
 {
-    private float timer;
-
-    private void OnEnable()
-    {
-        timer = 0f;
-    }
-
-    private void Update()
-    {
-        timer += Time.deltaTime;
-        if (timer >= 5f)
-        {
-            Destroy(this.gameObject);
-        }
-    }
-
+    [Header("Impulse Force")]
+    [SerializeField] private float impulseForce = 3f
+        ;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision.gameObject);
@@ -38,6 +25,5 @@ public class RockObject : MonoBehaviour
                 targetHealthScript.Damage(1);
             }
         }
-        Destroy(this.gameObject);
     }
 }

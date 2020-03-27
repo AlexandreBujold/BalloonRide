@@ -66,4 +66,9 @@ public class CameraFollow : MonoBehaviour
         }
     }
 
+    public void ChangeFollowTarget()
+    {
+        target = GameObject.Find("Basket").transform;
+    }
+
 }
