@@ -9,6 +9,33 @@ EditorBuildSettings:
     path: Assets/_GAME/Scenes/Start.unity
     guid: 53ff96e9019ae6b44b882dc045500a19
   - enabled: 1
+    path: Assets/_GAME/Scenes/Levels/Level1.unity
+    guid: dfdce5f78a026409497596e1224ab340
+  - enabled: 1
+    path: Assets/_GAME/Scenes/Levels/Level2.unity
+    guid: e61091b08843444c8a9ab45061a50de8
+  - enabled: 1
+    path: Assets/_GAME/Scenes/Levels/Level3.unity
+    guid: dddd6aafe120543d99bdf2490cd58b61
+  - enabled: 1
+    path: Assets/_GAME/Scenes/Levels/Level4.unity
+    guid: 98517e67e106e3e4e991757d1317df8c
+  - enabled: 1
+    path: Assets/_GAME/Scenes/Levels/Level5.unity
+    guid: 404e3a191ea831146bad54c10148d8f3
+  - enabled: 1
+    path: Assets/_GAME/Scenes/Levels/Level6.unity
+    guid: 201a38839e136324993fb633af430a10
+  - enabled: 1
+    path: Assets/_GAME/Scenes/Levels/Level7.unity
+    guid: fd8ddb0f8fbff764699073d30735ce41
+  - enabled: 1
+    path: Assets/_GAME/Scenes/Levels/Level8.unity
+    guid: 65d2a093b91bfba489066ca806cab40f
+  - enabled: 1
+    path: Assets/_GAME/Scenes/Levels/Level9.unity
+    guid: 957bbec0f8333fb4da731502cfbc1ed2
+  - enabled: 1
     path: Assets/_GAME/Scenes/Alex.unity
     guid: 48b06f8b96c64c449a0866660ebb64de
   m_configObjects: {}
