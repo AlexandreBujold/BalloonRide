@@ -84,6 +84,7 @@ MonoBehaviour:
   - Make sure to keep an eye on your fuel levels!
   - You can descend by pressing the S key!
   timeBetweenTips: 5
+  loadingScreenTitleText: {fileID: 3828259357198924675}
 --- !u!1001 &8395964416915532567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95,6 +96,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Loading Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730117427919502197, guid: 7190d38e07c112142b1d1a6701fe219a,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4730117427919502193, guid: 7190d38e07c112142b1d1a6701fe219a,
         type: 3}
@@ -201,10 +207,40 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4730117427919502197, guid: 7190d38e07c112142b1d1a6701fe219a,
+    - target: {fileID: 4730117428122581675, guid: 7190d38e07c112142b1d1a6701fe219a,
         type: 3}
-      propertyPath: m_Alpha
+      propertyPath: m_Text
+      value: 'Tip:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730117428122581675, guid: 7190d38e07c112142b1d1a6701fe219a,
+        type: 3}
+      propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730117428122581675, guid: 7190d38e07c112142b1d1a6701fe219a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730117428122581675, guid: 7190d38e07c112142b1d1a6701fe219a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730117427104544981, guid: 7190d38e07c112142b1d1a6701fe219a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.9339623
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730117427104544981, guid: 7190d38e07c112142b1d1a6701fe219a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9339623
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730117427104544981, guid: 7190d38e07c112142b1d1a6701fe219a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9339623
       objectReference: {fileID: 0}
     - target: {fileID: 4730117428723962005, guid: 7190d38e07c112142b1d1a6701fe219a,
         type: 3}
@@ -225,6 +261,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 793.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730117427010173145, guid: 7190d38e07c112142b1d1a6701fe219a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730117427010173145, guid: 7190d38e07c112142b1d1a6701fe219a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4730117428025830307, guid: 7190d38e07c112142b1d1a6701fe219a,
         type: 3}
@@ -257,51 +303,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4730117428723962004, guid: 7190d38e07c112142b1d1a6701fe219a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4730117427104544981, guid: 7190d38e07c112142b1d1a6701fe219a,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.9339623
-      objectReference: {fileID: 0}
-    - target: {fileID: 4730117427104544981, guid: 7190d38e07c112142b1d1a6701fe219a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.9339623
-      objectReference: {fileID: 0}
-    - target: {fileID: 4730117427104544981, guid: 7190d38e07c112142b1d1a6701fe219a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.9339623
-      objectReference: {fileID: 0}
-    - target: {fileID: 4730117427010173145, guid: 7190d38e07c112142b1d1a6701fe219a,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4730117427010173145, guid: 7190d38e07c112142b1d1a6701fe219a,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4730117428122581675, guid: 7190d38e07c112142b1d1a6701fe219a,
-        type: 3}
-      propertyPath: m_Text
-      value: 'Tip:'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4730117428122581675, guid: 7190d38e07c112142b1d1a6701fe219a,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4730117428122581675, guid: 7190d38e07c112142b1d1a6701fe219a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4730117428122581675, guid: 7190d38e07c112142b1d1a6701fe219a,
         type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -345,6 +346,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3828259357198924675 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4730117428723962004, guid: 7190d38e07c112142b1d1a6701fe219a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8395964416915532567}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &3828259356566131132 stripped

@@ -40,6 +40,7 @@ namespace BalloonGame.Scenes
         [Space]
         public float timeBetweenTips = 3;
         private Coroutine cycleTipsCoroutine;
+        public UnityEngine.UI.Text loadingScreenTitleText;
 
         [HideInInspector]
         public List<AsyncOperation> loadingScenes;
