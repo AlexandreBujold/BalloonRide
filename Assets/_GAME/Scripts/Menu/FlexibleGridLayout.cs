@@ -30,21 +30,14 @@ public class FlexibleGridLayout : LayoutGroup
             columns = Mathf.CeilToInt(sqrRt); 
         }
 
-        // 10:05
         //Decide how to Fit based on FitType
-        switch (fitType)
+        if (FitType.Width == fitType || FitType.FixedColumns == fitType)
         {
-            case FitType.Uniform:
-
-                break;
-
-            case FitType.Width:
-                rows = Mathf.CeilToInt(transform.childCount / (float)columns);
-                break;
-
-            case FitType.Height:
-                columns = Mathf.CeilToInt(transform.childCount / (float)rows);
-                break;
+            rows = Mathf.CeilToInt(transform.childCount / (float)columns);
+        }
+        if (FitType.Height == fitType || FitType.FixedRows == fitType)
+        {
+            columns = Mathf.CeilToInt(transform.childCount / (float)rows);
         }
 
 
@@ -53,9 +46,9 @@ public class FlexibleGridLayout : LayoutGroup
 
         float cellWidth = (parentWidth / (float)columns) - ((spacing.x / (float)columns) * 2) - (padding.left / (float)columns) - (padding.right / (float)columns);
         float cellHeight = (parentHeight / (float)rows) -((spacing.y / (float)rows) * 2) - (padding.top / (float)rows) - (padding.bottom / (float)rows);
-        
-        cellSize.x = cellWidth;
-        cellSize.y = cellHeight;
+
+        cellSize.x = fitX ? cellWidth : cellSize.x;
+        cellSize.y = fitY ? cellHeight : cellSize.y;
 
         int columnCount = 0;
         int rowCount = 0;

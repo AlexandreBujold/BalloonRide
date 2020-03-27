@@ -71,15 +71,15 @@ namespace BalloonGame.Scenes
         {
             //Testing
 
-            if (UnityEngine.Input.GetMouseButtonDown(0))
-            {
-                SetLoadingScreen(!loadingScreenVisible, animate);
-            }
+            //if (UnityEngine.Input.GetMouseButtonDown(0))
+            //{
+            //    SetLoadingScreen(!loadingScreenVisible, animate);
+            //}
 
-            if (UnityEngine.Input.GetMouseButtonDown(1))
-            {
-                ChangeScene(SceneIndexes.START_MENU);
-            }
+            //if (UnityEngine.Input.GetMouseButtonDown(1))
+            //{
+            //    ChangeScene(SceneIndexes.START_MENU);
+            //}
         }
 
         #region Scene Loading and Changing

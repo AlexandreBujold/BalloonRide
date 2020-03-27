@@ -17,10 +17,12 @@ namespace BalloonGame.Input
             if (Instance == null)
             {
                 Instance = this;
+                DontDestroyOnLoad(this.gameObject);
             }
             else if (Instance.gameObject != this.gameObject)
             {
                 Destroy(gameObject);
+                Debug.Log("Destroying duplicate of " + this.GetType().ToString());
             }
         }
 

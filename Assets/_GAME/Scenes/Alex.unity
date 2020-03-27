@@ -319,7 +319,7 @@ Transform:
   m_LocalScale: {x: 3.4, y: 0.2625, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &146333407
 GameObject:
@@ -649,7 +649,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &342608958
 GameObject:
@@ -684,7 +684,7 @@ Transform:
   - {fileID: 146333411}
   - {fileID: 73830489}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &519420031 stripped
 Camera:
@@ -1045,109 +1045,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectPrefab: {fileID: 3610504332270261724, guid: 92288319fe1726741814508f9f35459a,
     type: 3}
---- !u!1 &1848432437
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1848432439}
-  - component: {fileID: 1848432438}
-  m_Layer: 0
-  m_Name: == Input Controller ==
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1848432438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848432437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65de870ac0552c344bbb5be65f07854e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player1:
-    verticalInput:
-      axis: Vertical
-      pressed: 0
-      value: 0
-      lastValue: 0
-      timePressed: 0
-      timeBeingPressed: 0
-    horizontalInput:
-      axis: Horizontal
-      pressed: 0
-      value: 0
-      lastValue: 0
-      timePressed: 0
-      timeBeingPressed: 0
-    fire:
-      axis: Jump
-      pressed: 0
-      value: 0
-      lastValue: 0
-      timePressed: 0
-      timeBeingPressed: 0
-    secondaryFire:
-      axis: Fire1
-      pressed: 0
-      value: 0
-      lastValue: 0
-      timePressed: 0
-      timeBeingPressed: 0
-    facingDirection: -1
-  player2:
-    verticalInput:
-      axis: 
-      pressed: 0
-      value: 0
-      lastValue: 0
-      timePressed: 0
-      timeBeingPressed: 0
-    horizontalInput:
-      axis: 
-      pressed: 0
-      value: 0
-      lastValue: 0
-      timePressed: 0
-      timeBeingPressed: 0
-    fire:
-      axis: 
-      pressed: 0
-      value: 0
-      lastValue: 0
-      timePressed: 0
-      timeBeingPressed: 0
-    secondaryFire:
-      axis: 
-      pressed: 0
-      value: 0
-      lastValue: 0
-      timePressed: 0
-      timeBeingPressed: 0
-    facingDirection: -1
---- !u!4 &1848432439
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848432437}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1993684993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,7 +1296,7 @@ PrefabInstance:
     - target: {fileID: 1177270150965223994, guid: 3239d3c33134fd04594e111224e58d50,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1177270150965223994, guid: 3239d3c33134fd04594e111224e58d50,
         type: 3}
@@ -1486,7 +1383,7 @@ PrefabInstance:
     - target: {fileID: 4485777040283288446, guid: 90f3c1e3c9b1b7841905af8f3a43669f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4485777040283288446, guid: 90f3c1e3c9b1b7841905af8f3a43669f,
         type: 3}
@@ -1610,7 +1507,7 @@ PrefabInstance:
     - target: {fileID: 8395964417036387794, guid: c2a5695b01f2ddd4290d7a79d98b49a1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8395964417036387794, guid: c2a5695b01f2ddd4290d7a79d98b49a1,
         type: 3}
@@ -1699,7 +1596,7 @@ PrefabInstance:
     - target: {fileID: 8804913587009957273, guid: 59415c58b87c8574b9989a193c911279,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8804913587009957273, guid: 59415c58b87c8574b9989a193c911279,
         type: 3}
