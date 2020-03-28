@@ -17,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GAME/Scenes/Levels/Level3.unity
     guid: 14be566932dc5344ba739886e056943a
-  - enabled: 0
-    path: Assets/_GAME/Scenes/Levels/Level4.unity
-    guid: 98517e67e106e3e4e991757d1317df8c
   - enabled: 1
     path: Assets/_GAME/Scenes/Levels/Level5.unity
     guid: 404e3a191ea831146bad54c10148d8f3
@@ -28,13 +25,13 @@ EditorBuildSettings:
     guid: 201a38839e136324993fb633af430a10
   - enabled: 1
     path: Assets/_GAME/Scenes/Levels/Level7.unity
-    guid: fd8ddb0f8fbff764699073d30735ce41
+    guid: 1f01522122198d143b5e4463c055a8b1
   - enabled: 1
     path: Assets/_GAME/Scenes/Levels/Level8.unity
-    guid: 65d2a093b91bfba489066ca806cab40f
+    guid: 6a3e42191b4170e419826347bf5be408
   - enabled: 1
     path: Assets/_GAME/Scenes/Levels/Level9.unity
-    guid: 957bbec0f8333fb4da731502cfbc1ed2
+    guid: fe12ad784d7977144af3b67a9c9e8ff4
   - enabled: 1
     path: Assets/_GAME/Scenes/Alex.unity
     guid: 48b06f8b96c64c449a0866660ebb64de
