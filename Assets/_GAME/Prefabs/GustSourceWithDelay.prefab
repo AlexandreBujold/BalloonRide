@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 32452849}
   - component: {fileID: 32452851}
   - component: {fileID: 32452850}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Wind Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4762,7 +4762,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 678168963}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: VisualGimbal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4797,7 +4797,7 @@ GameObject:
   - component: {fileID: 830998725}
   - component: {fileID: 830998724}
   - component: {fileID: 830998723}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4813,7 +4813,7 @@ Transform:
   m_GameObject: {fileID: 830998721}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -1.54, z: 0}
-  m_LocalScale: {x: 4.381071, y: 3.0187502, z: 1}
+  m_LocalScale: {x: 5.366812, y: 3.0187502, z: 1}
   m_Children: []
   m_Father: {fileID: 678168963}
   m_RootOrder: 1
@@ -4889,7 +4889,7 @@ GameObject:
   - component: {fileID: 4656607113926308413}
   - component: {fileID: 4656607113926308400}
   - component: {fileID: 4656607113926308415}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GustSourceWithDelay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4923,12 +4923,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c05adf271450a5b45b3a31ffc8d6f5d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_facing: 0
+  m_facing: 3
+  layerFilter:
+    serializedVersion: 2
+    m_Bits: 1280
   visualGimbal: {fileID: 0}
   windParticle: {fileID: 0}
   capsuleSize: 5
-  gustStrength: 5
-  delay: 3
+  gustStrength: 10
+  delay: 6
   delayCoroutineStarted: 0
   gustEnabled: 0
 --- !u!23 &4656607113926308400
