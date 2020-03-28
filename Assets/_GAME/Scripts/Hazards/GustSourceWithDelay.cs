@@ -23,6 +23,9 @@ namespace BalloonGame.GustHazard
 
         protected override void OnEnable()
         {
+            visualGimbal = transform.GetChild(0).transform.gameObject;
+            windParticle = visualGimbal.transform.GetComponentInChildren<ParticleSystem>();
+
             InitializeDirection(m_facing);
             gustDelegate = GustConsistent;
             gustCoroutine = GustDelay(delay);
@@ -52,9 +55,11 @@ namespace BalloonGame.GustHazard
                 yield return new WaitForSeconds(waitTime);
                 Debug.Log("Enable");
                 gustEnabled = true;
+                windParticle.Play();
                 yield return new WaitForSeconds(waitTime);
                 Debug.Log("Disable");
                 gustEnabled = false;
+                windParticle.Stop();
             }
         }
     }
