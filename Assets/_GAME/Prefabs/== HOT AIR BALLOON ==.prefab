@@ -11977,7 +11977,7 @@ MonoBehaviour:
   horizontalRayCount: 4
   verticalRayCount: 3
   horizontalRaySpacing: 0.4766666
-  verticalRaySpacing: 0.9650006
+  verticalRaySpacing: 0.9649997
   m_balloonController: {fileID: 1177270151193168050}
   m_balloonRigidbody: {fileID: 1177270151193168051}
 --- !u!1 &1177270152445559310
@@ -12062,6 +12062,8 @@ GameObject:
   - component: {fileID: 1177270152501518640}
   - component: {fileID: 1177270152501518644}
   - component: {fileID: 1177270152501518643}
+  - component: {fileID: 425471006}
+  - component: {fileID: 715442855}
   m_Layer: 0
   m_Name: Basket
   m_TagString: Untagged
@@ -12225,6 +12227,38 @@ DistanceJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 2.33
   m_MaxDistanceOnly: 1
+--- !u!114 &425471006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177270152501518654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a769d2bf705ba142a067df33d9c5575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1
+  slowTimeOnCompletion: 1
+  slowTime: 1
+  timeScaleGoal: 0.25
+--- !u!114 &715442855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177270152501518654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a769d2bf705ba142a067df33d9c5575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1
+  slowTimeOnCompletion: 1
+  slowTime: 1
+  timeScaleGoal: 0.25
 --- !u!1 &1177270152657498247
 GameObject:
   m_ObjectHideFlags: 0
@@ -12435,6 +12469,17 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   OnKill:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1177270152501518654}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
