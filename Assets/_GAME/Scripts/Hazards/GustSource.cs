@@ -15,12 +15,20 @@ namespace BalloonGame.GustHazard
             DOWN
         }
 
-        [Header("Wing Gust Direction")]
+        [Header("Wind Gust Direction")]
         [SerializeField] protected Direction m_facing;
 
         protected delegate void GustDel();
 
         protected GustDel gustDelegate;
+
+        [Space]
+        [Header("Gimbal Object")]
+        [SerializeField] protected GameObject visualGimbal;
+
+        [Space]
+        [Header("Wind Particle")]
+        [SerializeField] protected ParticleSystem windParticle;
 
         [Space]
         [Header("Float Variables")]
@@ -31,6 +39,9 @@ namespace BalloonGame.GustHazard
 
         protected virtual void OnEnable()
         {
+            visualGimbal = transform.GetChild(0).transform.gameObject;
+            windParticle = visualGimbal.transform.GetComponentInChildren<ParticleSystem>();
+
             InitializeDirection(m_facing);
             gustDelegate = GustConsistent;
         }
@@ -114,6 +125,19 @@ namespace BalloonGame.GustHazard
             if (m_facing == Direction.NULL)
             {
                 m_facing = Direction.RIGHT;
+            }
+            
+            if(m_facing == Direction.RIGHT)
+            {
+                visualGimbal.transform.Rotate(0, 0, -90);
+            }
+            else if(m_facing == Direction.LEFT)
+            {
+                visualGimbal.transform.Rotate(0, 0, 90);
+            }
+            else if(m_facing == Direction.DOWN)
+            {
+                visualGimbal.transform.Rotate(0, 0, 180);
             }
         }
     }

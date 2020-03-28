@@ -34,13 +34,14 @@ namespace BalloonGame.Balloon.Health
 
         public void Kill()
         {
+            Debug.Log(this.transform.parent.gameObject);
             if (null != m_balloonController)
             {
                 if (OnKill != null)
                 {
                     OnKill.Invoke();
-                    Destroy(this.transform.parent.gameObject);
                 }
+                Destroy(m_balloonController.gameObject);
             }
         }
     } 
