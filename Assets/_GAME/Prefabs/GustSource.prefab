@@ -4970,7 +4970,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_facing: 0
+  layerFilter:
+    serializedVersion: 2
+    m_Bits: 1280
   visualGimbal: {fileID: 0}
   windParticle: {fileID: 0}
   capsuleSize: 5
-  gustStrength: 5
+  gustStrength: 50

@@ -23,6 +23,10 @@ namespace BalloonGame.GustHazard
         protected GustDel gustDelegate;
 
         [Space]
+        [Header("LayerMask")]
+        [SerializeField] protected LayerMask layerFilter;
+
+        [Space]
         [Header("Gimbal Object")]
         [SerializeField] protected GameObject visualGimbal;
 
@@ -62,7 +66,7 @@ namespace BalloonGame.GustHazard
             switch(m_facing)
             {
                 case Direction.LEFT:
-                    if (results = Physics2D.CapsuleCast(transform.position, new Vector2(capsuleSize, capsuleSize), CapsuleDirection2D.Horizontal, 0, Vector2.left, Mathf.Infinity))
+                    if (results = Physics2D.CapsuleCast(transform.position, new Vector2(capsuleSize, capsuleSize), CapsuleDirection2D.Horizontal, 0, Vector2.left, Mathf.Infinity, layerFilter))
                     {
                         if (results.transform.GetComponentInChildren<BalloonController>())
                         {
@@ -75,7 +79,7 @@ namespace BalloonGame.GustHazard
                     break;
 
                 case Direction.UP:
-                    if (results = Physics2D.CapsuleCast(transform.position, new Vector2(capsuleSize, capsuleSize), CapsuleDirection2D.Vertical, 0, Vector2.up, Mathf.Infinity))
+                    if (results = Physics2D.CapsuleCast(transform.position, new Vector2(capsuleSize, capsuleSize), CapsuleDirection2D.Vertical, 0, Vector2.up, Mathf.Infinity, layerFilter))
                     {
                         if (results.transform.GetComponentInChildren<BalloonController>())
                         {
@@ -88,7 +92,7 @@ namespace BalloonGame.GustHazard
                     break;
 
                 case Direction.DOWN:
-                    if (results = Physics2D.CapsuleCast(transform.position, new Vector2(capsuleSize, capsuleSize), CapsuleDirection2D.Vertical, 0, Vector2.down, Mathf.Infinity))
+                    if (results = Physics2D.CapsuleCast(transform.position, new Vector2(capsuleSize, capsuleSize), CapsuleDirection2D.Vertical, 0, Vector2.down, Mathf.Infinity,layerFilter))
                     {
                         if (results.transform.GetComponentInChildren<BalloonController>())
                         {
@@ -101,7 +105,7 @@ namespace BalloonGame.GustHazard
                     break;
 
                 case Direction.RIGHT:
-                    if (results = Physics2D.CapsuleCast(transform.position, new Vector2(capsuleSize, capsuleSize), CapsuleDirection2D.Vertical, 0, Vector2.right, Mathf.Infinity))
+                    if (results = Physics2D.CapsuleCast(transform.position, new Vector2(capsuleSize, capsuleSize), CapsuleDirection2D.Vertical, 0, Vector2.right, Mathf.Infinity, layerFilter))
                     {
                         if (results.transform.GetComponentInChildren<BalloonController>())
                         {
