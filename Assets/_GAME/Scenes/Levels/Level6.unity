@@ -1210,6 +1210,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: == HOT AIR BALLOON == (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1740000729250162850, guid: 3239d3c33134fd04594e111224e58d50,
+        type: 3}
+      propertyPath: OnKill.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1411004246}
+    - target: {fileID: 1740000729250162850, guid: 3239d3c33134fd04594e111224e58d50,
+        type: 3}
+      propertyPath: OnKill.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeFollowTarget
+      objectReference: {fileID: 0}
     - target: {fileID: 1177270150965223994, guid: 3239d3c33134fd04594e111224e58d50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1770,6 +1780,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 052731eaf5ef7254bacd655e765909cb, type: 3}
+--- !u!114 &1411004246 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9208958296089127071, guid: 052731eaf5ef7254bacd655e765909cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1411004245}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60b05ee8474e634883e92a020bdda5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1563536028
 PrefabInstance:
   m_ObjectHideFlags: 0
