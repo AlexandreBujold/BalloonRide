@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 namespace BalloonGame.Balloon.Health
 {
@@ -13,6 +14,13 @@ namespace BalloonGame.Balloon.Health
 
         public UnityEvent OnDamage;
         public UnityEvent OnKill;
+
+        public TextMeshProUGUI textObj;
+
+        private void Update()
+        {
+            textObj.text = health.ToString();
+        }
 
         public void Heal(int amount)
         {
