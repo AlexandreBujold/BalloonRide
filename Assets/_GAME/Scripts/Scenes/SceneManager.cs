@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 namespace BalloonGame.Scenes
 {
@@ -45,6 +46,11 @@ namespace BalloonGame.Scenes
         [HideInInspector]
         public List<AsyncOperation> loadingScenes;
 
+        public bool paused = false;
+        public bool pauseEnabled = false;
+
+        public UnityEvent OnPause;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -81,6 +87,8 @@ namespace BalloonGame.Scenes
             //{
             //    ChangeScene(SceneIndexes.START_MENU);
             //}
+
+            CheckPause();
         }
 
         #region Scene Loading and Changing
@@ -384,6 +392,32 @@ namespace BalloonGame.Scenes
         }
 
         #endregion
+
+        private void CheckPause()
+        {
+            if(UnityEngine.Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (currentScene != SceneIndexes.START_MENU)
+                {
+                    OnPause.Invoke();
+                    if(pauseEnabled)
+                    {
+                        Time.timeScale = 1f;
+                    }
+                    else
+                    {
+                        Time.timeScale = 0f;
+                    }
+                    pauseEnabled = !pauseEnabled;
+                }
+            }
+        }
+
+        public void ResetMenu()
+        {
+            Time.timeScale = 1f;
+            pauseEnabled = false;
+        }
     }
 
 }
