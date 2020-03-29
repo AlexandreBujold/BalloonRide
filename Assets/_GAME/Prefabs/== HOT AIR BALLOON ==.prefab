@@ -12062,8 +12062,7 @@ GameObject:
   - component: {fileID: 1177270152501518640}
   - component: {fileID: 1177270152501518644}
   - component: {fileID: 1177270152501518643}
-  - component: {fileID: 425471006}
-  - component: {fileID: 715442855}
+  - component: {fileID: 678352229}
   m_Layer: 0
   m_Name: Basket
   m_TagString: Untagged
@@ -12227,7 +12226,7 @@ DistanceJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 2.33
   m_MaxDistanceOnly: 1
---- !u!114 &425471006
+--- !u!114 &678352229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12236,23 +12235,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1177270152501518654}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a769d2bf705ba142a067df33d9c5575, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 1
-  slowTimeOnCompletion: 1
-  slowTime: 1
-  timeScaleGoal: 0.25
---- !u!114 &715442855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1177270152501518654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a769d2bf705ba142a067df33d9c5575, type: 3}
+  m_Script: {fileID: 11500000, guid: f60358e0f281d8a40aa4a710b324654e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 1
@@ -12470,12 +12453,23 @@ MonoBehaviour:
   OnKill:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1177270152501518654}
-        m_MethodName: 
+      - m_Target: {fileID: 0}
+        m_MethodName: ChangeFollowTarget
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 678352229}
+        m_MethodName: CompleteLevelWithSlow
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

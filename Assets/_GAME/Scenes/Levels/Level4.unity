@@ -888,16 +888,6 @@ PrefabInstance:
       propertyPath: OnKill.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1286903459}
-    - target: {fileID: 1740000729250162850, guid: 3239d3c33134fd04594e111224e58d50,
-        type: 3}
-      propertyPath: OnKill.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeFollowTarget
-      objectReference: {fileID: 0}
-    - target: {fileID: 1740000729250162850, guid: 3239d3c33134fd04594e111224e58d50,
-        type: 3}
-      propertyPath: OnKill.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 1177270150965223994, guid: 3239d3c33134fd04594e111224e58d50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -961,8 +951,7 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 715442855, guid: 3239d3c33134fd04594e111224e58d50, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3239d3c33134fd04594e111224e58d50, type: 3}
 --- !u!1001 &693470821
 PrefabInstance:
